@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 25
+  buildToolsVersion "25.0.2"
+  signingConfigs {
+//    release {
+//      keyAlias 'androiddebugkey'
+//      keyPassword 'android'
+//      storeFile file('/Users/zhaohaitao/Downloads/AirMapView-master/sample/debug.keystore')
+//      storePassword 'android'
+//    }
+    release {
+      keyAlias 'onestep'
+      keyPassword 'xglorydev123'
+      storeFile file('/Users/zhaohaitao/Desktop/android_onestep/keystore_onestep.jks')
+      storePassword 'xglorydev123'
+    }
+    debug {
+      keyAlias 'androiddebugkey'
+      keyPassword 'android'
+      storeFile file('/Users/zhaohaitao/Downloads/AirMapView-master/sample/debug.keystore')
+      storePassword 'android'
+    }
+  }
+  defaultConfig {
+    applicationId "com.airbnb.airmapview.sample"
+    minSdkVersion 21
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+    multiDexEnabled true
+  }
+  lintOptions {
+    disable 'GradleCompatible'
+  }
+  buildTypes {
+    release {
+      signingConfig signingConfigs.release
+    }
+    debug {
+      signingConfig signingConfigs.debug
+    }
+  }
+}
+
+dependencies {
+  compile project(':library')
+  compile 'com.android.support:multidex:1.0.1'
+  compile 'com.android.support:recyclerview-v7:25.1.0'
+  compile 'com.android.support:appcompat-v7:25.1.0'
+  compile 'com.google.android.gms:play-services:10.0.1'
+}

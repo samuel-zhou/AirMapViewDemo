@@ -1,0 +1,9 @@
+<resources>
+    <!-- demo中默认的key -->
+    <!--<string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">-->
+    <!--AIzaSyDxxG08-MZlZV772EMqzliBRP9b1o_rGvg-->
+    <!--</string>-->
+
+    <!-- 自己申请的key -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDLVCTkvoJHpMW6MwUhswpOFa0A8dgcGzA</string>
+</resources>
